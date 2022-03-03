@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <Contenedor />
-      <h2>Nuestros Productos</h2>
-      <Productos />
+
+      <Productos titulo="Nuestros Productos" />
       <Footer />
     </div>
   );

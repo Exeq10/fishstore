@@ -1,18 +1,23 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Card from "./Card";
 
-function Productos() {
+function Productos(props) {
+  const { titulo } = props;
+
   return (
-    <section className="productos">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </section>
+    <Fragment>
+      <h2>{titulo}</h2>
+      <section className="productos">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </section>
+    </Fragment>
   );
 }
 
