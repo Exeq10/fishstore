@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+/* globales */
+img {
+  display: block;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.3rem 0 1.3rem;
+}
+
+.logo {
+  width: 15rem;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+/* navegacion */
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegacion ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navegacion ul li {
+  font-size: 1.3rem;
+}
+
+.cart {
+  width: 2rem;
+}
+
+/* contenedor */
+.contenedor {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.productos {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* banner */
+
+.banner {
+  width: 70rem;
+  height: 35rem;
+  margin: 0 auto;
+}
+.banner img {
+  border-radius: 1rem;
+}
+
+/* cards */
+
+.card {
+  width: 18rem;
+  border: 0.5px solid #333;
+  padding: 1rem;
+}
+
+/* footer */
+
+.footer {
+  background-color: #004aad;
+  padding: 1.3rem;
+  margin-top: 3rem;
+  color: white;
+}
