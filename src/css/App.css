@@ -22,6 +22,14 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0 1.3rem 0 1.3rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
 }
 
 .logo {
@@ -40,13 +48,86 @@ a {
   align-items: center;
 }
 
-.navegacion ul {
+.enlaces {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .enlaces {
+    flex-direction: row;
+  }
 }
 
 .navegacion ul li {
   font-size: 1.3rem;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0.4rem;
+  position: absolute;
+  z-index: 10;
+  width: 12rem;
+  height: 1rem;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+  -webkit-box-shadow: -4px 2px 12px -3px rgba(51, 51, 3, 1);
+  -moz-box-shadow: -4px 2px 12px -3px rgba(51, 51, 3, 1);
+  box-shadow: -4px 2px 12px -3px rgba(51, 51, 3, 1);
+
+  transition: ease-in 300ms;
+  border-radius: 0.1rem;
+  background-color: white;
+}
+
+.Item-submenu a {
+  color: black;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.item {
+  padding: 0.2rem;
+  color: blue;
+  position: relative;
+}
+
+.item:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: blue;
+  transition: all 0.3s;
+}
+
+.item:hover:before {
+  width: 100%;
+}
+.Item-submenu {
+  visibility: hidden;
+}
+
+.cat {
+  cursor: pointer;
+}
+
+.cat:hover .submenu,
+.Item-submenu {
+  visibility: visible;
+  opacity: 1;
+  height: 15rem;
 }
 
 .cart {
@@ -56,8 +137,7 @@ a {
 /* contenedor */
 .contenedor {
   width: 95%;
-  margin: 0 auto;
-  margin-top: 3rem;
+  margin: 3rem auto 3rem auto;
 }
 
 .productos {
@@ -67,6 +147,7 @@ a {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* banner */
@@ -86,6 +167,33 @@ a {
   width: 18rem;
   border: 0.5px solid #333;
   padding: 1rem;
+}
+
+/* ItemCount */
+
+.count {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+
+.count-button {
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.mas {
+  background-color: green;
+}
+
+.menos {
+  background-color: red;
 }
 
 /* footer */

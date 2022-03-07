@@ -1,5 +1,7 @@
-import React from "react";
+import { React, useState } from "react";
 import logo from "../assets/img/Fish-Store-logo.png";
+import { Button } from "react-bootstrap";
+import ItemCount from "./ItemCount";
 
 function Card() {
   return (
@@ -15,7 +17,8 @@ function Card() {
         </p>
       </body>
       <footer className="footer-card">
-        <button className="btn">Comprar</button>
+        <ItemCount />
+        <Button variant="success">Comprar</Button>{" "}
       </footer>
     </div>
   );
