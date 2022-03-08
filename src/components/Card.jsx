@@ -3,7 +3,7 @@ import logo from "../assets/img/Fish-Store-logo.png";
 import { Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 
-function Card() {
+function Card({ initial, stock }) {
   return (
     <div className="card">
       <header className="header-card">
@@ -17,7 +17,7 @@ function Card() {
         </p>
       </body>
       <footer className="footer-card">
-        <ItemCount />
+        <ItemCount initial={initial} stock={stock} />
         <Button variant="success">Comprar</Button>{" "}
       </footer>
     </div>

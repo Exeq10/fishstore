@@ -8,14 +8,14 @@ function Productos(props) {
     <Fragment>
       <h2>{titulo}</h2>
       <section className="productos">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card stock={25} initial={1} />
+        <Card stock={20} initial={1} />
+        <Card stock={5} initial={1} />
+        <Card stock={9} initial={1} />
+        <Card stock={7} initial={1} />
+        <Card stock={17} initial={1} />
+        <Card stock={12} initial={1} />
+        <Card stock={10} initial={1} />
       </section>
     </Fragment>
   );
