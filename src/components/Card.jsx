@@ -2,6 +2,7 @@ import { React, useState } from "react";
 
 import { Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
+import ItemDetail from "./ItemDetail";
 
 function Card({ initial, productos }) {
   const { picture, stock, nombre, tipo, precio } = productos;
@@ -13,6 +14,8 @@ function Card({ initial, productos }) {
       minimumFractionDigits: 2,
     });
   };
+
+  <ItemDetail formato={Formato} />;
 
   console.log(picture);
   return (
