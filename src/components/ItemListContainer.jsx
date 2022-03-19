@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import Card from "../components/Card";
+import Contenedor from "./Contenedor";
 
 /* componente  */
 function ItemListContainer(props) {
@@ -8,26 +10,33 @@ function ItemListContainer(props) {
   const [productos, setProductos] = useState([]);
   const [cargar, setCargar] = useState(true);
 
+  const { categoria } = useParams();
+
   /* funcion que toma los datos del array y simula el retraso de red */
-  const getDatos = () => {
+  function getDatos() {
     return new Promise((res, rej) => {
       setTimeout(() => {
         if (Objetos.length <= 0) {
           rej(setProductos(false));
         } else {
-          res(Objetos);
+          if (!categoria) {
+            res(Objetos);
+          } else {
+            res(Objetos.filter((objeto) => objeto.categoria === categoria));
+          }
         }
-      }, 2000);
+      }, 1500);
     });
-  };
+  }
 
   useEffect(() => {
+    setCargar(true);
     getDatos()
       .then((response) => setProductos(response))
 
       .catch((err) => console.log(err))
       .finally(() => setCargar(false));
-  }, []);
+  }, [categoria]);
 
   return (
     <Fragment>

@@ -3,21 +3,19 @@ import { React, useState } from "react";
 import { Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import ItemDetail from "./ItemDetail";
+import { Link } from "react-router-dom";
+
+export function Formato(valor, moneda) {
+  return valor.toLocaleString("en-US", {
+    style: "currency",
+    currency: moneda,
+    minimumFractionDigits: 2,
+  });
+}
 
 function Card({ initial, productos }) {
-  const { picture, stock, nombre, tipo, precio } = productos;
+  const { picture, stock, nombre, tipo, precio, id } = productos;
 
-  const Formato = (valor, moneda) => {
-    return valor.toLocaleString("en-US", {
-      style: "currency",
-      currency: moneda,
-      minimumFractionDigits: 2,
-    });
-  };
-
-  <ItemDetail formato={Formato} />;
-
-  console.log(picture);
   return (
     <div className="card">
       <div className="header-card">
@@ -29,8 +27,9 @@ function Card({ initial, productos }) {
         <p className="price"> {Formato(precio, "UYU")}</p>
       </div>
       <div className="footer-card">
-        <ItemCount initial={initial} stock={stock} />
-        <Button variant="success">Comprar</Button>{" "}
+        <Link to={`/detail/${id}`}>
+          <Button variant="success">Ver detalles </Button>
+        </Link>
       </div>
     </div>
   );

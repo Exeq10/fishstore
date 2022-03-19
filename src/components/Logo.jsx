@@ -4,7 +4,9 @@ import fish from "../assets/img/Fish-Store-logo.png";
 function Logo() {
   return (
     <div className="logo">
-      <img src={fish} alt="logo" />
+      <a href="/">
+        <img src={fish} alt="logo" />
+      </a>
     </div>
   );
 }

@@ -3,50 +3,28 @@ import { Button } from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
-function ItemDetail({ items, formato }) {
-  const [itemdetail, setIdetail] = useState([]);
-  const [cargar, setCargar] = useState(true);
+import { Formato } from "./Card";
 
-  const promesa = new Promise((res, rej) => {
-    setTimeout(() => {
-      if (items.length >= 0) {
-        res(items);
-      } else {
-        rej(console.log("error"));
-      }
-    }, 2500);
-  });
-
-  useEffect(() => {
-    promesa
-      .then((response) => setIdetail(response))
-      .catch((err) => console.log(err))
-      .finally(() => setCargar(false));
-  }, []);
-
+function ItemDetail({ producto }) {
   return (
     <div>
-      {itemdetail ? (
-        cargar ? (
-          <Spinner animation="border" variant="primary" />
-        ) : (
-          <div className="itemdetail">
-            <div className="itemimg">
-              <img src={itemdetail[0].picture} alt="imagen" />
-            </div>
-            <div className="itemInfo">
-              <h3 className="name">{itemdetail[0].nombre}</h3>
-              <p>{itemdetail[0].description}</p>
-              <h4 className="price">$ {itemdetail[0].precio}</h4>
-              <ItemCount initial={1} stock={itemdetail[0].stock} />
+      <div className="itemdetail">
+        <div className="itemImage">
+          <img src={producto[0].picture} alt="imagenProducto" />
+        </div>
 
-              <Button variant="success">Comprar</Button>
-            </div>
-          </div>
-        )
-      ) : (
-        <p>no hay productos</p>
-      )}
+        <div className="itemInfo">
+          <h2>{producto[0].nombre}</h2>
+          <p>{producto[0].description}</p>
+          <h3 className="price">{Formato(producto[0].precio, "UYU")}</h3>
+          <h4>{producto[0].tipo}</h4>
+
+          <ItemCount initial={1} stock={producto[0].stock} />
+          <Button className="success" variant="success">
+            Comprar
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }

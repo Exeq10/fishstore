@@ -1,8 +1,8 @@
 import React from "react";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
-function Navegacion(props) {
-  const { enlaces } = props;
+function Navegacion() {
   return (
     <nav className="navegacion">
       <ul className="enlaces">
@@ -10,38 +10,29 @@ function Navegacion(props) {
           <Cart />
         </li>
 
-        {enlaces.map((enlace, key) => (
-          <li key={key}>
-            <a href="" className="item">
-              {enlace}
-            </a>
-          </li>
-        ))}
+        <li className=" cat item">
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li className=" cat item">
+          {" "}
+          <Link to={"/info"}> Info</Link>
+        </li>
+        <li className=" cat item"></li>
 
         <li className="cat item">
           Productos ▼
           <ul className="submenu">
-            <li className="Item-submenu">
-              <a href="" className="item">
-                Cañas
-              </a>
+            <li className="Item-submenu item">
+              <Link to={"/productos/caña"}> Cañas</Link>
             </li>
-            <li className="Item-submenu">
-              <a href="" className="item">
-                Reels Frontales
-              </a>
-            </li>
-
-            <li className="Item-submenu">
-              <a href="" className="item">
-                Reels Rotativos
-              </a>
-            </li>
-
-            <li className="Item-submenu">
-              <a href="" className="item">
-                Equipamiento
-              </a>
+            <li className="Item-submenu item">
+              <Link to={"/productos/reel"}> Reels</Link>
+            </li>{" "}
+            <li className="Item-submenu item">
+              <Link to={"/productos/tanza"}> Tanzas</Link>
+            </li>{" "}
+            <li className="Item-submenu item">
+              <Link to={"/productos/accesorio"}> Accesorios</Link>
             </li>
           </ul>
         </li>
