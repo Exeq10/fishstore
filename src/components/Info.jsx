@@ -3,7 +3,7 @@ import React from "react";
 function Info() {
   return (
     <div className="info">
-      <h2>Sobre Nostros</h2>
+      <h2>Sobre Nosotros</h2>
     </div>
   );
 }

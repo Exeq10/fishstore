@@ -17,6 +17,10 @@ function Navegacion() {
           {" "}
           <Link to={"/info"}> Info</Link>
         </li>
+        <li className=" cat item">
+          {" "}
+          <Link to={"/contacto"}> Contacto</Link>
+        </li>
         <li className=" cat item"></li>
 
         <li className="cat item">

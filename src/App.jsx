@@ -3,6 +3,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Info from "./components/Info";
+import CartList from "./components/CartList";
 
 import "./css/App.css";
 
@@ -11,8 +12,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /* array de objetos */
 import { Objetos } from "./components/datos/Objetos";
+import Contacto from "./components/Contacto";
 
 function App() {
+  {
+  }
   return (
     <BrowserRouter>
       <div className="App">
@@ -36,11 +40,14 @@ function App() {
             element={<ItemListContainer Objetos={Objetos} />}
           />
           <Route path="/info" element={<Info />} />
+          <Route path="/contacto" element={<Contacto />} />
 
           <Route
             path="/detail/:id"
             element={<ItemDetailContainer Objetos={Objetos} />}
           />
+
+          <Route path="/cart" element={<CartList />} />
 
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>

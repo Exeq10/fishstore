@@ -1,18 +1,22 @@
 import { React, useState } from "react";
 
-function ItemCount({ initial, stock }) {
-  const [stockItem, setStockItem] = useState(initial);
+function ItemCount({ stock, cantidad, setCantidad }) {
+  const [stockItem, setStockItem] = useState(stock);
 
   /* Funciones */
   const Sumar = () => {
-    if (stockItem < stock) {
-      setStockItem(stockItem + 1);
+    if (cantidad < stock) {
+      setCantidad(cantidad + 1);
+      setStockItem(stockItem - 1);
+
+      console.log(stockItem);
     }
   };
 
   const Restar = () => {
-    if (stockItem > 0) {
-      setStockItem(stockItem - 1);
+    if (cantidad > 0) {
+      setCantidad(cantidad - 1);
+      setStockItem(stockItem + 1);
     }
   };
 
@@ -26,7 +30,7 @@ function ItemCount({ initial, stock }) {
       >
         -
       </button>
-      <h4>{stockItem}</h4>
+      <h4>{cantidad}</h4>
       <button
         className="count-button mas"
         onClick={() => {

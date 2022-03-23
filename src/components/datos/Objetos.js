@@ -7,7 +7,7 @@ export const Objetos = [
     picture: "/images/reel frontal1.jpg",
     stock: 40,
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur quis distinctio sunt quod corrupti, earum atque hic aspernatur eveniet aliquid totam veniam debitis dolore ut repudiandae, fugit voluptates reprehenderit.",
+      "Reel Marca Okuma excelente performance , 8 rulemanes y , ideal para iniciarse en este deporte.",
     categoria: "reel",
   },
 
@@ -19,7 +19,8 @@ export const Objetos = [
     picture: "/images/reelrotativo1.jpg",
     stock: 30,
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur quis distinctio sunt quod corrupti, earum atque hic aspernatur eveniet aliquid totam veniam debitis dolore ut repudiandae, fugit voluptates reprehenderit.",
+      " - Diseño de punta transparente para mayor resistencia y sensibilidad ,cuenta con 4 rodamientos de bolas de acero inoxidable su diseño de punta transparente para mayor resistencia y sensibilidad ",
+
     categoria: "reel",
   },
 
@@ -31,7 +32,7 @@ export const Objetos = [
     picture: "/images/caña2.jpg",
     stock: 14,
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur quis distinctio sunt quod corrupti, earum atque hic aspernatur eveniet aliquid totam veniam debitis dolore ut repudiandae, fugit voluptates reprehenderit.",
+      "Caña maciza de 3mts 2 tramos reforzada con capuchón metálico en los acoples,a diferencia de las cañas telescópicas q suelen aflojarse o agarrar juego si se usan en la arena con corta vida útil , esta caña en dos tramos es para toda la vida !",
     categoria: "caña",
   },
   {
@@ -42,7 +43,8 @@ export const Objetos = [
     picture: "/images/tanzasufix.jpg",
     stock: 40,
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur quis distinctio sunt quod corrupti, earum atque hic aspernatur eveniet aliquid totam veniam debitis dolore ut repudiandae, fugit voluptates reprehenderit.",
+      "Bobina Tanza Sufix , Diametro 0.40mm , Cantidad 500mts , Soporta 18.8kg/41LB.",
+
     categoria: "tanza",
   },
   {
